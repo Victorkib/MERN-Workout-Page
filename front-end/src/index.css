@@ -1,0 +1,449 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: wheat;
+  overflow-x: hidden;
+  margin-bottom: 0px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.custom-loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, #f41d4b) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg 20deg,
+      #0000 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 18px),
+      #000 calc(100% - 16px)
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s4 0.5s infinite steps(10);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid saddlebrown;
+  height: 12vh;
+  margin-bottom: 10px;
+}
+header h2 {
+  text-transform: capitalize;
+  color: olive;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px crimson;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+}
+header ul a {
+  text-decoration: none;
+  margin: 0 5px;
+  padding: 0px 4px;
+  text-align: center;
+  background: #ffffff65;
+  box-shadow: 1px 1px 2px rgb(206, 14, 40);
+  border-radius: 8px;
+  transition: all 600ms ease-in-out;
+}
+header ul a:hover {
+  background-color: #222;
+  color: #ff6600;
+}
+header ul p {
+  margin: 0 10px;
+  color: olive;
+  text-transform: capitalize;
+}
+.not-found {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+.not-found h1,
+.not-found p {
+  text-align: center;
+  color: crimson;
+  font-size: 1.8rem;
+}
+.not-found ul {
+  display: flex;
+  justify-content: center;
+}
+.not-found ul a {
+  text-decoration: none;
+  margin: 5px;
+}
+
+.app {
+  height: 100vh;
+}
+.home {
+  margin-bottom: 20vh;
+}
+.Signup,
+.login,
+.workout-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.Signup h2,
+.login h2,
+.workout-form h2 {
+  color: chocolate;
+  font-size: 2rem;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  height: 50vh;
+}
+form label {
+  color: rgb(30, 167, 25);
+  text-transform: capitalize;
+}
+form input {
+  text-align: justify;
+  width: 90%;
+  background: none;
+  border: 1px solid rgba(201, 32, 125, 0.473);
+  border-radius: 8px;
+  margin: 5px 0px;
+  padding: 3px;
+  height: 4vh;
+}
+form button {
+  margin-top: 20px;
+  max-width: 80px;
+  border: none;
+  border-radius: 12px;
+  background: yellowgreen;
+  padding: 8px;
+  transition: all 500ms ease-in-out;
+}
+.workout-form button {
+  margin-top: 20px;
+
+  max-width: 100px;
+  border: none;
+  border-radius: 12px;
+  background: yellowgreen;
+  padding: 8px;
+  transition: all 500ms ease-in-out;
+}
+form button:hover {
+  background-color: crimson;
+}
+
+.error {
+  text-align: center;
+  color: crimson;
+}
+.workouts {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid coral;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+.workout-details button {
+  margin-right: 20px;
+  background: none;
+  border: 1px solid goldenrod;
+  border-radius: 12px;
+  text-align: center;
+  color: black;
+  padding: 6px;
+  transition: all 600 ease-in-out;
+}
+.workout-details button:hover {
+  background-color: #222;
+  color: crimson;
+  cursor: pointer;
+}
+.workouts p {
+  margin: 3px 0px;
+  color: #222;
+  text-transform: capitalize;
+}
+.loading {
+  text-align: center;
+  color: orangered;
+}
+.nothing p {
+  text-align: center;
+}
+.username {
+  text-transform: capitalize;
+}
+.welcome {
+  text-align: start;
+  color: crimson;
+  font-size: 2rem;
+  transition: all 5ms ease-in-out;
+}
+.time p {
+  color: #ff6600;
+}
+
+/* About.css */
+
+.about-header header {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.about-header header h1 {
+  font-size: 36px;
+  color: olive;
+  text-shadow: 2px 2px 4px rgb(180, 10, 25);
+  text-decoration: underline;
+}
+
+.about-header {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission-vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px;
+}
+.about-section h2 {
+  text-align: center;
+}
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 2px 2px 4px wheat;
+}
+.about-section,
+.mission-vision,
+.team-section {
+  margin-bottom: 30px;
+}
+.about-header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: olive;
+}
+
+.about-header p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.mission {
+  padding: 5px;
+  width: 50%;
+  flex: 1;
+  margin-right: 20px;
+  box-shadow: 2px 2px 4px wheat;
+}
+.vision {
+  padding: 5px;
+  width: 50%;
+  flex: 1;
+  margin-right: 20px;
+  box-shadow: 2px 2px 4px wheat;
+}
+
+.mission div,
+.vision div {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.mission h2,
+.vision h2 {
+  text-align: center;
+}
+.mission div img,
+.vision div img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+/*Scroll bar css*/
+/* Hide the default scrollbar on Webkit browsers (Safari, Chrome) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #333; /* Change the background color to your desired color */
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #666; /* Change the thumb color to your desired color */
+  border-radius: 6px; /* Add rounded corners to the thumb */
+}
+
+/* When the user hovers over the scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Change the thumb color on hover */
+}
+
+/*End of about css GPT*/
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-logo img {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+}
+.footer-logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.links li a {
+  margin: 0 8px;
+}
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+  color: #ff6600;
+}
+
+.footer-bottom {
+  margin: 5px 0px;
+  background-color: #222;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+/*End of Footer Css from GPT*/
+
+/*Scroll bar css*/
+/* Hide the default scrollbar on Webkit browsers (Safari, Chrome) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #333; /* Change the background color to your desired color */
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #666; /* Change the thumb color to your desired color */
+  border-radius: 6px; /* Add rounded corners to the thumb */
+}
+
+/* When the user hovers over the scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Change the thumb color on hover */
+}
+
+/*End Of Scroll bar css*/
+
+/* Responsive styles */
+
+@keyframes s4 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+  .about-section,
+  .mission-vision,
+  .team-section {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+  .about-section p {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+}
