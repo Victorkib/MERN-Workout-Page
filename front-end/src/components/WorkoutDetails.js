@@ -38,6 +38,7 @@ const WorkoutDetails = ({ workout }) => {
       <p>Workout Title: {workout.title}</p>
       <p>Workout Reps: {workout.reps}</p>
       <p>Workout Load(kg): {workout.load}</p>
+      <p>Other Info: {workout.otherInfo}</p>
       <div className="time">
         <p>Created At:{formatDate(workout.createdAt)} </p>{' '}
         {/* Use formatDate */}

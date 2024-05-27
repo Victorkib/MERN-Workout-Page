@@ -31,12 +31,18 @@ module.exports.single_get = async (req, res) => {
 module.exports.single_post = async (req, res) => {
   const user_id = req.user._id;
   console.log(user_id);
-  const { title, reps, load } = req.body;
-  if (!title || !reps || !load) {
+  const { title, reps, load, otherInfo } = req.body;
+  if (!title || !reps || !load || !otherInfo) {
     return res.status(400).json({ error: 'All fields Must be Filled!' });
   }
   try {
-    const workout = await Workout.create({ title, reps, load, user_id });
+    const workout = await Workout.create({
+      title,
+      reps,
+      load,
+      otherInfo,
+      user_id,
+    });
     if (!workout) {
       throw new Error('Error While creating Workout');
     }

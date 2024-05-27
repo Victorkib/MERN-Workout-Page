@@ -6,6 +6,7 @@ const EditForm = () => {
   const [title, setTitle] = useState('');
   const [reps, setReps] = useState('');
   const [load, setLoad] = useState('');
+  const [otherInfo, setOtherInfo] = useState('');
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
@@ -25,16 +26,17 @@ const EditForm = () => {
       setTitle(json.title);
       setReps(json.reps);
       setLoad(json.load);
+      setOtherInfo(json.otherInfo);
     };
     fetchData();
   }, [id]);
 
   const handleEdit = async (e) => {
     e.preventDefault();
-    console.log(title, reps, load);
+    console.log(title, reps, load, otherInfo);
     const response = await fetch(`http://localhost:3500/api/workouts/${id}`, {
       method: 'PATCH',
-      body: JSON.stringify({ title, reps, load }),
+      body: JSON.stringify({ title, reps, load, otherInfo }),
       credentials: 'include',
       headers: { 'Content-Type': 'Application/json' },
     });
@@ -48,6 +50,7 @@ const EditForm = () => {
       setTitle('');
       setReps('');
       setLoad('');
+      setOtherInfo('');
       setError(null);
       setSuccess('Workout Editted!');
       setTimeout(() => {
@@ -80,6 +83,12 @@ const EditForm = () => {
           value={load}
           onChange={(e) => setLoad(e.target.value)}
         />
+        <label>Other Info:</label>
+        <textarea
+          className="otherInfo"
+          value={otherInfo}
+          onChange={(e) => setOtherInfo(e.target.value)}
+        ></textarea>
         <button>Edit</button>
         {error && <div className="error">{error}</div>}
         {success && <h4 className="success">{success}</h4>}

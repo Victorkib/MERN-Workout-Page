@@ -130,8 +130,18 @@ form input {
   border: 1px solid rgba(201, 32, 125, 0.473);
   border-radius: 8px;
   margin: 5px 0px;
-  padding: 3px;
+  padding: 4px;
   height: 4vh;
+}
+textarea {
+  text-align: justify;
+  width: 90%;
+  background: none;
+  border: 1px solid rgba(201, 32, 125, 0.473);
+  border-radius: 8px;
+  /* margin: 5px 0px; */
+  padding: 4px;
+  /* height: 4vh; */
 }
 form button {
   margin-top: 20px;
